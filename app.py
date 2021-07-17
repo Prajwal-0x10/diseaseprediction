@@ -124,17 +124,17 @@ def predict():
             predict = model.predict(inputtest)
             predicted=predict[0]
 
-            h='no'
+            h='0'
             for a in range(0,len(disease)):
                 if(predicted == a):
-                    h='yes'
+                    h='1'
                     break
 
 
-            if (h=='yes'):
+            if (h=='1'):
 
                 return disease[a]
-            elif (h=='no'):
+            elif (h=='0'):
 
                 return "Not Found"
 
